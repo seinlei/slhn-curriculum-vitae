@@ -6,7 +6,7 @@ body
     padding: 0;
     display: flex;
     flex-direction: column;
-    min-height: 800vh;
+    min-height: 500vh;
 }
 
 header
@@ -99,8 +99,23 @@ main
     color: black; 
     display: inline-block; /* Display as inline-block to apply transformations */
     animation: floating 3s infinite alternate ease-in-out; /* Apply floating animation */
-    margin-left: -50%;
+    margin-left: -40%;
+    font-family: 'Sedan SC', serif;
 }
+
+.intro-text, .skills-text {
+    font-size: 25px;
+    color: #333;
+    width: 60%; /* Adjust width as needed */
+    max-width: 800px;
+    line-height: 1.6;
+    font-family: 'Caveat', cursive;
+    font-style: italic;
+    margin: 0 auto; /* Center the text horizontally */
+    margin-top: 10px; /* Adjust the top margin to bring it closer to the h2 */
+}
+
+
 
 /* Keyframes for floating animation */
 @keyframes floating 
@@ -116,6 +131,32 @@ main
     }
 }
 
+.content-wrapper 
+{
+    display: flex;
+    margin-top: 20px;
+}
+
+.text-content 
+{
+    flex: 1;
+    margin-right: 10px;
+}
+
+.image-content 
+{
+    flex-shrink: 0;
+    margin-top: -70px;
+    margin-left: -20px; 
+}
+
+.profile-photo 
+{
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    object-fit: cover;
+}
 
 .footer1
 {
