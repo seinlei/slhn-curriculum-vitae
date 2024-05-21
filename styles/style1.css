@@ -6,7 +6,7 @@ body
     padding: 0;
     display: flex;
     flex-direction: column;
-    min-height: 300vh;
+    min-height: 150vh;
 }
 
 header
@@ -78,7 +78,7 @@ header:hover
 
 .navigation ul li a:hover 
 {
-    color: #d1e429; 
+    color: #eb4e63; 
 }
 
 main
@@ -87,6 +87,7 @@ main
     margin: 20px;
 }
 
+/* welcome section */
 .welcome-section 
 {
     text-align: center; 
@@ -156,7 +157,42 @@ main
     height: 500px;
     border-radius: 50%;
     object-fit: cover;
+    margin-top: -100px; 
+    margin-left: 10px; 
 }
+
+/* More About Me Button */
+.about-me-button 
+{
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: black;
+    font-family: 'Caveat', cursive;
+    font-weight: bold;
+    background: linear-gradient(to right, rgb(235, 170, 215), rgb(247, 168, 181));
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px; /* Adjust the top margin to bring it closer to the text */
+}
+
+.about-me-button:hover 
+{
+    transform: translateY(-5px); /* Move up slightly on hover */
+}
+
+.about-me-button:active 
+{
+    transform: translateY(2px); /* Move down slightly on click */
+}
+
+.arrow 
+{
+    margin-left: 10px; /* Spacing between text and arrow */
+}
+
+/* skills section  */
 
 .skills 
 {
@@ -208,6 +244,49 @@ main
     margin-top: 10px;
 }
 
+/* Quote Section */
+.quote-section 
+{
+    padding: 50px 20px;
+    text-align: center;
+    margin-top: 40px;
+    border-radius: 15px;
+}
+
+.quote-container 
+{
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.quote-text 
+{
+    font-family: 'Caveat', cursive;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 10px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.quote-author 
+{
+    font-family: 'Indie Flower', cursive;
+    font-size: 24px;
+    color: #555;
+}
+
+@keyframes fadeIn 
+{
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 .footer1
 {
@@ -215,4 +294,60 @@ main
     background-color: white;
     text-align: center;
     height: 100px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .welcome-section {
+        margin-top: 25%;
+    }
+
+    .welcome-section h2 {
+        font-size: 40px;
+        margin-left: 0;
+    }
+
+    .content-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-photo {
+        width: 200px;
+        height: 200px;
+        margin-top: 20%;
+        margin-left: 0;
+    }
+
+    .intro-text, .skills-text {
+        width: 80%;
+        font-size: 15px;
+    }
+
+    .skills-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill-logo {
+        max-width: 80%;
+    }
+
+    .code {
+        width: 60px;
+        height: 60px;
+    }
+
+    .quote-text {
+        font-size: 24px;
+    }
+
+    .quote-author {
+        font-size: 18px;
+    }
 }
