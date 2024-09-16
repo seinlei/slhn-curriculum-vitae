@@ -1,0 +1,149 @@
+body
+{
+    background-color: rgb(255, 233, 214);
+    width: auto;
+    margin: 0; 
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 150vh;
+}
+
+header
+{
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px 0;
+    z-index: 1000;
+    text-align: center; 
+    width: 100%;
+    padding: 10px 0;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 233, 214);
+}
+header:hover
+{
+        background: linear-gradient(to right, #eb9f8c, #fa9dc7); 
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
+
+}
+
+.navigation
+{
+    margin-right: 40px;
+}
+
+.navigation ul 
+{
+    list-style-type: none; /* Removes default list styles */
+}
+
+.navigation ul li 
+{
+    display: inline-block; /* Displays list items horizontally */
+    margin-left: 20px; /* Add spacing between navigation items */
+}
+
+
+.navigation ul li:first-child 
+{
+    margin-left: 0; /* Removes left margin from the first navigation item */
+}
+
+.navigation ul li a 
+{
+    color: darkslategray; 
+    font-weight: bold;
+    font-size: large;
+    font-family: Snell Roundhand, cursive;
+}
+
+.navigation ul li a:hover 
+{
+    color: #eb4e63; 
+}
+
+main {
+    margin-top: 180px; 
+}
+
+.bio-education-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%; 
+    margin: 20px auto; 
+    margin-bottom: 40px; /* Add margin to create space between bio/edu boxes and skills box */
+    height: auto; 
+    gap: 50px;
+}
+.bio-box, .education-box {
+    perspective: 1000px; /* Enable 3D effect */
+    position: relative; /* Needed for flipping */
+    width: calc(50% - 10px); /* Adjusted width */
+    height: 400px; /* Set height to keep boxes even */
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px; /* Add margin to create space between bio/edu boxes and skills box */
+}
+
+.bio-front, .bio-back, .education-front, .education-back {
+    width: 100%; 
+    height: 100%; 
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    backface-visibility: hidden; 
+    position: absolute;
+    transition: transform 0.6s ease;
+    margin-bottom: 40px; /* Add margin to create space between bio/edu boxes and skills box */
+}
+
+.bio-front, .education-front {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 40px; /* Add margin to create space between bio/edu boxes and skills box */
+}
+
+.bio-back, .education-back {
+    transform: rotateY(180deg); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px; /* Add margin to create space between bio/edu boxes and skills box */
+}
+
+.bio-box:hover .bio-front, .education-box:hover .education-front {
+    transform: rotateY(180deg); 
+}
+
+.bio-box:hover .bio-back, .education-box:hover .education-back {
+    transform: rotateY(0deg); 
+}
+
+.skills-box {
+    width: 80%; 
+    margin: 40px auto 20px; /* Adjust bottom margin to create space below the bio and education boxes */
+    height: 500px; 
+    background-color: #f5f5f5; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.footer1
+{
+    padding: 20px 0;
+    background-color: white;
+    text-align: center;
+    height: 100px;
+}
