@@ -46,40 +46,44 @@ header:hover
 
 }
 
-.navigation
-{
+.navigation {
     margin-right: 40px;
 }
 
-.navigation ul 
-{
-    list-style-type: none; /* Removes default list styles */
+.navigation ul {
+    list-style-type: none; 
 }
 
-.navigation ul li 
-{
-    display: inline-block; /* Displays list items horizontally */
-    margin-left: 20px; /* Add spacing between navigation items */
+.navigation ul li {
+    display: inline-block; 
+    margin-left: 20px; 
 }
 
-
-.navigation ul li:first-child 
-{
-    margin-left: 0; /* Removes left margin from the first navigation item */
+.navigation ul li:first-child {
+    margin-left: 0; 
 }
 
-.navigation ul li a 
-{
-    color: darkslategray; 
+.navigation ul li a {
+    color: white;
     font-weight: bold;
     font-size: large;
     font-family: Snell Roundhand, cursive;
+    text-decoration: none; 
+    padding: 10px 20px; 
+    background-color: #fe2964; 
+    border-radius: 8px; 
+    border: 5px solid white; 
+    display: inline-block; 
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2); 
+    transition: all 0.3s ease-in-out; 
 }
 
-.navigation ul li a:hover 
-{
-    color: #eb4e63; 
+.navigation ul li a:hover {
+    background-color: #eb4e63; 
+    box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.3); 
+    transform: translateY(-2px); 
 }
+
 
 main
 {
@@ -192,51 +196,57 @@ main
     margin-left: 10px; /* Spacing between text and arrow */
 }
 
-/* skills section  */
-
-.skills 
-{
-    margin: 40px auto;
+.skills {
+    margin: 100px auto;
     padding: 0 5%;
     max-width: 1200px;
     text-align: center;
 }
 
-.skills h2 
-{
+.skills h2 {
     font-size: 30px;
     color: #030522;
     margin-bottom: 20px;
+    text-align: center; /* Center the heading */
 }
 
-.skills-list 
-{
+.skills-list {
     display: flex;
-    justify-content: space-around;
+    justify-content: center; /* Center the skills section */
     align-items: flex-start;
     gap: 20px;
     flex-wrap: wrap;
 }
 
-.skill-logo 
-{
+.skill-logo {
     flex: 1;
     max-width: 300px;
     text-align: center;
     margin: 20px;
 }
 
-.code 
-{
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
-    margin-bottom: 10px;
-    border-radius: 50%; 
+@keyframes icons {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); /* Adjust this value to control how high it floats */
+    }
 }
 
-.skill-logo p 
-{
+.skill-logo i {
+    font-size: 80px;
+    margin-bottom: 10px;
+    animation: icons 3s ease-in-out infinite; /* Apply the floating animation */
+}
+
+.skill-logo h3 {
+    font-size: 20px;
+    color: #030522;
+    margin: 10px 0;
+}
+
+.skill-logo p {
     font-size: 16px;
     color: #333;
     font-family: 'Indie Flower', cursive;
@@ -244,12 +254,13 @@ main
     margin-top: 10px;
 }
 
+
 /* Quote Section */
 .quote-section 
 {
     padding: 50px 20px;
     text-align: center;
-    margin-top: 40px;
+    margin-top: 30px;
     border-radius: 15px;
 }
 
