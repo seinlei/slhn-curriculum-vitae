@@ -102,22 +102,23 @@ main
 {
     font-size: 60px; 
     color: black; 
-    display: inline-block; /* Display as inline-block to apply transformations */
-    animation: floating 3s infinite alternate ease-in-out; /* Apply floating animation */
+    display: inline-block; 
+    animation: floating 3s infinite alternate ease-in-out; 
     margin-left: -40%;
     font-family: 'Sedan SC', serif;
 }
 
 .intro-text, .skills-text {
+    margin: 0 auto; 
+    margin-top: 5px; 
     font-size: 25px;
-    color: #333;
-    width: 60%; /* Adjust width as needed */
+    color: #0f0101;
+    width: 60%; 
     max-width: 800px;
-    line-height: 1.6;
-    font-family: 'Caveat', cursive;
+    line-height: 2;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
     font-style: italic;
-    margin: 0 auto; /* Center the text horizontally */
-    margin-top: 10px; /* Adjust the top margin to bring it closer to the h2 */
 }
 
 

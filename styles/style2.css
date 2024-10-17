@@ -82,7 +82,7 @@ main {
     margin: 20px auto; 
     height: auto; 
     gap: 70px;
-    font-family: 'Sedan SC', serif;
+    font-family: 'Playfair Display', serif;
 }
 
 .bio-box, .education-box {
@@ -94,9 +94,16 @@ main {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 40px; 
+    transition: all 0.3s ease;
 }
 
-.bio-front, .bio-back, .education-front, .education-back {
+
+.bio-box:hover {
+    height: auto;
+    z-index: 0;
+}
+
+.bio-front, .bio-back {
     width: 100%; 
     height: 100%; 
     padding: 20px;
@@ -107,7 +114,7 @@ main {
     transition: transform 0.6s ease;
 }
 
-.bio-front, .education-front {
+.bio-front {
     animation: floatText 3s infinite ease-in-out;
 }
 
@@ -123,7 +130,7 @@ main {
     }
 }
 
-.bio-front, .education-front {
+.bio-front{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -133,7 +140,7 @@ main {
     background-color: #fc7171;
 }
 
-.bio-back, .education-back {
+.bio-back {
     transform: rotateY(180deg); 
     display: flex;
     align-items: center;
@@ -142,11 +149,11 @@ main {
     background-color: rgb(255, 233, 214);
 }
 
-.bio-box:hover .bio-front, .education-box:hover .education-front {
+.bio-box:hover .bio-front {
     transform: rotateY(180deg); 
 }
 
-.bio-box:hover .bio-back, .education-box:hover .education-back {
+.bio-box:hover .bio-back{
     transform: rotateY(0deg); 
 }
 
@@ -175,6 +182,53 @@ main {
     height: 100%;
 }
 
+.timeline {
+    position: relative;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 100%;
+}
+
+.timeline-item {
+    position: absolute;
+    padding: 20px;
+    background-color: rgb(255, 233, 214);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 430px;
+    border: 10px solid #fc7171;;
+    display: none;
+    box-sizing: border-box;
+}
+
+.timeline-item:first-child {
+    display: block; 
+}
+
+.timeline-item h3 {
+    font-size: 1.6rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+    font-family: 'Snell Roundhand', cursive;
+}
+
+.timeline-item h3 i {
+    color: #fe2964; 
+    margin-right: 10px;
+}
+
+.timeline-item p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+
+
 
 .skills-box {
     width: 85%; 
@@ -183,6 +237,8 @@ main {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative; 
+    z-index: 1; 
 }
 
 .skills-container {
@@ -241,6 +297,7 @@ main {
     grid-template-columns: 1fr 1fr;
     gap: 20px;
     color: white;
+    z-index: 2;
 }
 
 .icon-box {
