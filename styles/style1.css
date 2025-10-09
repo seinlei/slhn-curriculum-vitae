@@ -103,57 +103,74 @@ main {
     color: #555;
 }
 
-/* More About Me Button */
-
-.about-me-button {
-    display: inline-block;
-    padding: 12px 28px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    font-size: 1rem;
-    color: black;
-    text-decoration: none;
-    border-radius: 30px;
-    background: linear-gradient(135deg, #fe89b5, #ffc3a0);
-    box-shadow: 0 4px 10px rgba(254, 137, 181, 0.3);
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
+/* Explore My Projects Box */
+.project-box {
+  position: relative;
+  display: inline-block;
+  margin-top: 40px;
 }
 
-
-.about-me-button::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -75%;
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(120deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%);
-    transform: skewX(-20deg);
-    transition: all 0.6s ease;
+.project-toggle {
+  background: linear-gradient(90deg, #fe89b5, #ffc3a0);
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 14px 38px;
+  border: none;
+  border-radius: 18px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(254, 137, 181, 0.3);
+  transition: all 0.3s ease;
 }
 
-.about-me-button:hover::before {
-    left: 130%;
+.project-toggle:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(254, 137, 181, 0.45);
 }
 
-.about-me-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 18px rgba(254, 137, 181, 0.4);
-    background: linear-gradient(135deg, #fe7fa7, #ffbfa6);
+/* Dropdown menu */
+.project-dropdown {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 110%;
+  background: #f0b1b1;
+  border-radius: 15px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+  width: 240px;
+  padding: 15px 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, top 0.4s ease;
+  z-index: 10;
 }
 
-.arrow {
-    margin-left: 8px;
-    transition: transform 0.3s ease;
+.project-box:hover .project-dropdown {
+  opacity: 1;
+  visibility: visible;
+  top: 120%;
 }
 
-.about-me-button:hover .arrow {
-    transform: translateX(4px);
+/* Dropdown links */
+.project-dropdown a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+  text-align: left;
 }
 
-/* skills section */
+.project-dropdown a:hover {
+  background: #fff0f6;
+  color: black;
+  padding-left: 25px;
+}
+
+/* second section - skills */
 .skills {
   margin: 120px auto;
   padding: 0 5%;
@@ -219,44 +236,87 @@ main {
   font-family: 'Poppins', sans-serif;
 }
 
-/* Quote Section */
-.quote-section {
-    padding: 50px 20px;
-    text-align: center;
-    margin-top: 30px;
-    border-radius: 15px;
+/* third section - creative approach */
+.creative-approach {
+  text-align: center;
+  padding: 50px 20px;
 }
 
-.quote-container {
-    max-width: 800px;
-    margin: 0 auto;
-    position: relative;
+.approach-container {
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.quote-text {
-    font-family: 'Caveat', cursive;
-    font-size: 36px;
-    color: #333;
-    margin-bottom: 10px;
-    animation: fadeIn 2s ease-in-out;
+.approach-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #222;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
 }
 
-.quote-author {
-    font-family: 'Indie Flower', cursive;
-    font-size: 24px;
-    color: #555;
+.title-accent {
+  width: 100px;
+  height: 4px;
+  margin: 0 auto 25px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, #fe89b5, #ffc3a0, #fe89b5);
+  background-size: 300% 100%;
+  animation: moveGradient 4s ease infinite;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.approach-intro {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  color: #444;
+  margin: 0 auto 60px;
+  max-width: 700px;
+  line-height: 1.8;
+}
+
+.approach-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.approach-card {
+  background: #f9f9ff;
+  border-radius: 15px;
+  padding: 30px 20px;
+  max-width: 280px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.approach-card h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.approach-card p {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.approach-card:hover {
+  background: #fff0f6;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(254, 137, 181, 0.25);
 }
 
 /* Footer section */
@@ -325,62 +385,200 @@ main {
   letter-spacing: 0.3px;
 }
 
+/* .footer-quote {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-quote .quote-text {
+  font-family: 'Indie Flower', cursive;
+  font-size: 1.1rem;
+  color: #53092d;
+  text-shadow: 0 0 8px rgba(255, 182, 193, 0.6);
+  margin-bottom: 6px;
+}
+
+.footer-quote .quote-author {
+  font-family: 'Indie Flower', cursive;
+  font-size: 1rem;
+  color: #0c0c0c;
+  text-shadow: 0 0 6px rgba(255, 192, 203, 0.4);
+  margin-top: 0;
+}
+ */
 
 
+/* for tablets and mobile */
+@media (max-width: 1024px) {
+  .navigation ul {
+    gap: 1rem;
+  }
 
-/* Media Queries */
+  .intro-heading {
+    font-size: 1.8rem;
+  }
+
+  .skills-list,
+  .approach-cards {
+    gap: 20px;
+  }
+}
+
+/* For tablets and small laptops */
 @media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        height: auto;
-    }
+  header {
+    height: auto;
+    padding: 1rem;
+  }
 
-    .welcome-section {
-        margin-top: 25%;
-    }
+  .navigation ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
 
-    .welcome-section h2 {
-        font-size: 40px;
-        margin-left: 0;
-    }
+  .navigation ul li a {
+    padding: 8px 14px;
+    font-size: 0.95rem;
+  }
 
-    .content-wrapper {
-        flex-direction: column;
-        align-items: center;
-    }
+  .welcome-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 100px 20px 60px;
+  }
 
-    .profile-photo {
-        width: 200px;
-        height: 200px;
-        margin-top: 20%;
-        margin-left: 0;
-    }
+  .welcome-container {
+    text-align: center;
+  }
 
-    .intro-text,
-    .skills-text {
-        width: 80%;
-        font-size: 15px;
-    }
+  .intro-heading {
+    font-size: 1.7rem;
+    line-height: 1.5;
+  }
 
-    .skills-list {
-        flex-direction: column;
-        align-items: center;
-    }
+  .intro-text,
+  .skills-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
 
-    .skill-logo {
-        max-width: 80%;
-    }
+  .project-box {
+    margin-top: 30px;
+  }
 
-    .code {
-        width: 60px;
-        height: 60px;
-    }
+  .project-toggle {
+    font-size: 0.95rem;
+    padding: 12px 28px;
+  }
 
-    .quote-text {
-        font-size: 24px;
-    }
+  .skills {
+    margin: 80px auto;
+  }
 
-    .quote-author {
-        font-size: 18px;
-    }
+  .skill-card {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  .creative-approach {
+    padding: 60px 20px;
+  }
+
+  .approach-intro {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .footer-container h3 {
+    font-size: 1.1rem;
+  }
+
+  .footer-links a {
+    font-size: 0.9rem;
+    margin: 0 10px;
+  }
+}
+
+/* For mobile phones (max-width: 480px) */
+@media (max-width: 480px) {
+  body {
+    min-height: auto;
+  }
+
+  header {
+    height: auto;
+    padding: 0.8rem;
+  }
+
+  .navigation ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .navigation ul li a {
+    display: block;
+    width: 80%;
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 8px 0;
+  }
+
+  .intro-heading {
+    font-size: 1.5rem;
+  }
+
+  .intro-text,
+  .skills-text {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .project-toggle {
+    width: 90%;
+    padding: 12px 0;
+    font-size: 0.9rem;
+  }
+
+  .project-dropdown {
+    width: 90%;
+  }
+
+  .skills {
+    margin: 60px auto;
+  }
+
+  .skill-card {
+    max-width: 100%;
+    padding: 25px 20px;
+  }
+
+  .approach-title {
+    font-size: 1.6rem;
+  }
+
+  .approach-intro {
+    font-size: 0.9rem;
+  }
+
+  .approach-card {
+    max-width: 100%;
+    padding: 25px 18px;
+  }
+
+  .footer-container h3 {
+    font-size: 1rem;
+  }
+
+  .footer-links a {
+    display: block;
+    margin: 6px 0;
+    font-size: 0.85rem;
+  }
+
+  .footer-copy {
+    font-size: 0.8rem;
+  }
 }
