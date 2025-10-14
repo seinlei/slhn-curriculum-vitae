@@ -65,38 +65,32 @@ header {
 }
 
 .bio-box {
-  background: #ffffff;
+  background: #ffffff8a;
   border-radius: 20px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
   border: 1px solid #f2f2f2;
   padding: 50px 40px;
   max-width: 1000px;
   width: 100%;
-  transition: all 0.3s ease;
-}
-
-.bio-box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 24px rgba(254, 137, 181, 0.15);
-  border-color: rgba(254, 137, 181, 0.3);
 }
 
 .bio-box h2 {
-  font-family: 'Playfair Display', serif;
+ font-family: 'Playfair Display', serif;
   font-size: 2rem;
   color: #222;
-  margin-bottom: 25px;
+  margin-bottom: 40px;
   position: relative;
+  text-align: center;
+  
 }
 
-.bio-box h2::after,
-.education-box h2::after {
+.bio-box h2::after {
   content: "";
   display: block;
   width: 70px;
   height: 3px;
   background: linear-gradient(90deg, #fe89b5, #ffc3a0);
-  margin-top: 8px;
+  margin: 10px auto 0;
   border-radius: 3px;
 }
 
@@ -155,7 +149,7 @@ header {
 }
 
 .education-item {
-  background: #ffffff;
+  background: #ffffff8a;
   border-radius: 16px;
   padding: 30px 25px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);

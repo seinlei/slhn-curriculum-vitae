@@ -170,6 +170,32 @@ main {
   padding-left: 25px;
 }
 
+.project-buttons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.project-buttons .project-toggle {
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+/* Prevent dropdown from showing when hovering CV button */
+.project-box:hover .project-dropdown {
+  opacity: 1;
+  visibility: visible;
+  top: 120%;
+}
+
+.cv-btn:hover ~ .project-dropdown {
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+
 /* second section - skills */
 .skills {
   margin: 120px auto;
